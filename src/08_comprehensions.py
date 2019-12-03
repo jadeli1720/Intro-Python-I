@@ -11,13 +11,15 @@ for more info regarding list comprehensions.
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
 y = []
+for x in range(6): #range must go one above the target number
+    y.append(x)
 
 print (y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
-y = []
+y = [a**3 for a in range(10)]
 
 print(y)
 
@@ -26,7 +28,7 @@ print(y)
 
 a = ["foo", "bar", "baz"]
 
-y = []
+y = [word.upper()for word in a]
 
 print(y)
 
@@ -36,6 +38,8 @@ print(y)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-y = []
+# list of only even numbers
+# iterate through inputs and 
+y = [num for num in x if float(num) % 2 == 0]
 
 print(y)
