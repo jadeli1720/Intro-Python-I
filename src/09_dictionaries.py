@@ -60,4 +60,4 @@ print(f"Modifying a waypoint: {waypoints}")
 # YOUR CODE HERE
 for y in waypoints:
     for key, value in y.items():
-        print(value)
+        print(key,value)
