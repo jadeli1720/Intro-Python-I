@@ -85,10 +85,10 @@ The suggested order for going through each of the directories is:
 * [x] `dictionaries` -- Dictionaries
 * [x] `functions` -- Functions
 * [x] `args` -- Arguments and Keyword Arguments
-* [] `scopes` -- Global, Local, and Non-Local scope
-* [] `file_io` -- Read and write from files
+* [x] `scopes` -- Global, Local, and Non-Local scope
+* [x] `file_io` -- Read and write from files
 * [] `cal` -- Experiment with module imports and implement a text-based calendar
-* [] `classes` -- Classes and objects
+* [x] `classes` -- Classes and objects
 
 ## Stretch Goals
 
