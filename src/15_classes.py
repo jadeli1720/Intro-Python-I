@@ -12,11 +12,10 @@ class Latlon:
 # constructor. It should inherit from LatLon. Look up the `super` method.
 
 # YOUR CODE HERE
-class Waypoint:
+class Waypoint(Latlon):
     def __init__(self, name, lat, lon):
         self.name = name
-        self.lat = lat
-        self.lon = lon
+        super().__init__(lat, lon)
 
     def __str__(self):
         return (f"The waypoint's name is {self.name} and is at latitude {self.lat} and longitude {self.lon}.")
@@ -25,13 +24,11 @@ class Waypoint:
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
 
 # YOUR CODE HERE
-class Geocache:
-    def __init__(self, name, difficulty, size, lat, lon):
-        self.name = name
+class Geocache(Waypoint):
+    def __init__(self, difficulty, size, name, lat, lon ):
         self.difficulty = difficulty
         self.size = size
-        self.lat = lat
-        self.lon = lon
+        super().__init__(name, lat, lon)
     
     def __str__(self):
         return (f"{self.name} is a {self.difficulty} difficulty, comes in at size {self.size}, and resides at {self.lat} latitude, {self.lon} longitude.")
