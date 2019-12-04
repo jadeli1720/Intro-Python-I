@@ -46,31 +46,35 @@ args = sys.argv
 """
 # print(len(args)) # Prints length of 3 
 
-current_month = datetime.now().month
-current_year = datetime.now().year
+current_month = int(datetime.now().month)
+current_year = int(datetime.now().year)
 
 # no inputs --> current datetime 
 if len(args) == 1:
-    
-    print("There are no arguments")
+    print(calendar.month(current_year, current_month))
+    # print("There are no arguments")
 
 # month input --> current year datetime
 elif len(args) == 2:
-    print("There is a month but no year")
+    month = int(args[1]) 
+    print(args[1])
+    print(calendar.month(current_year , month) )
+    # print("There is a month but no year")
 
 # month & year input --> user inputs
 elif len(args) == 3:
-    print("Month and a Year")
+    month = int(args[1]) 
+    year = int(args[2])
+    print(calendar.month(year, month))
+    # print("Month and a Year")
 
 #invalid input --> more than just month and year
 else:
-    print("Expected month and year")
+    print("The month should be formatted as a whole number (1 - 12); Years must be 4 digits (ex, 2018)")
 
 
 
 print(args)
-
-
 
 
 
