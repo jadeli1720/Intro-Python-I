@@ -25,10 +25,11 @@ Type the following in the terminal to see the results
 print ( sys.argv )
 # The first argument will be the filename
 if len(sys.argv) > 1 :
-    for arg in sys.argv:
-        print( arg )
-    #below prints out the argument at index 1 if there is one
-    print(sys.argv[1])
+    # prints each on an individual line
+    # for arg in sys.argv:
+    #     print( arg )
+    # #below prints out the argument at index 1 if there is one
+    # print(sys.argv[1])
 
     # #Bellow is if you enter in a number as an argument at index 1
     print(float(sys.argv[1]) + 5)

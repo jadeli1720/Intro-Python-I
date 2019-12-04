@@ -22,3 +22,55 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+# QUESTIONS:
+    # 1. Do we use sys to grab current month from system? Why is this imported?
+      # so we can add the arguments from the user and do something with them like in the modules.py
+    # 2. How do to use calender?
+    # 3. How to use datetime?
+
+# Need conditional statement:
+    # 1 - No user input --> output current date (datetime)
+    # 2 - If user specifies one input --> assume month input and output month of current year
+    # 3 - If user put in both inputs --> assume both inputs and output month and year of inputs
+    # 4 - Incorrect --> output expected inputs to be given by user 
+    # exit program
+
+# user input
+args = sys.argv
+
+"""
+|---- 0 ----|--- 1 ---|-- 2 -- |
+['14_cal.py', 'month',  'year']
+
+"""
+# print(len(args)) # Prints length of 3 
+
+current_month = datetime.now().month
+current_year = datetime.now().year
+
+# no inputs --> current datetime 
+if len(args) == 1:
+    
+    print("There are no arguments")
+
+# month input --> current year datetime
+elif len(args) == 2:
+    print("There is a month but no year")
+
+# month & year input --> user inputs
+elif len(args) == 3:
+    print("Month and a Year")
+
+#invalid input --> more than just month and year
+else:
+    print("Expected month and year")
+
+
+
+print(args)
+
+
+
+
+
