@@ -15,7 +15,20 @@ y = "7"
 
 # YOUR CODE HERE
 
+# x + int(y)
+
+
+print(x + int(y))
+
 
 # Write a print statement that combines x + y into the string value 57
 
 # YOUR CODE HERE
+
+print(str(x) + y )
+
+# Why is the value 57 when x is turned into a string?
+
+# Because it is treating both values as letters or strings to be put together (like the bellow hello world example); not numbers/integers that are inputted and then have an operation performed on them.
+
+print("hello" + " " + "world")
